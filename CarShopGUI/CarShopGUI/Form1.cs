@@ -16,11 +16,12 @@ namespace CarShopGUI
         /*
          * Added Remove button
          * Cleaned up display
-         * Added Error Notification
+         * Added Error Notification(Let's the user know if there are any errors)
          * Implemented a simple forum design
          * Updated total cost to reflect whenever change happens
          * Added a Randomizer, simplifies entries to the inventory
          * Added a double click listener
+         * 
          */
 
 
