@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EA1_Activity1
+namespace CarShopGUI
 {
     static class Program
     {

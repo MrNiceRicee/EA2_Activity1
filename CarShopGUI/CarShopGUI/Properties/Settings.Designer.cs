@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EA1_Activity1.Properties
+namespace CarShopGUI.Properties
 {
 
 
