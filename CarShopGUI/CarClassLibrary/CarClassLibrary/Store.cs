@@ -59,7 +59,7 @@ namespace CarClassLibrary
         private String[] Nissan = {"Altima", "Maxima" , "Rogue" , "Versa", "Sentra", "Pathfinder", "Skyline GTR", "Skyline R32", "Skyline R33", "Skyline R34" };
         private String[] Ford = {"Fusion", "F-150", "Escape" ,  "Explorer" , "Mustang" , "Fiesta" };
         private String[] Tesla = {"Model S", "Model 3", "Model X", "Model Y", "Roadster", "Roadster 2.0" };
-        private String[] BMW = { "3 Series", "X3   ", "M3     ", "X5      ", "7 Series", "5 Series", "6 Series" };
+        private String[] BMW = { "3 Series", "X3      ", "M3      ", "X5      ", "7 Series", "5 Series", "6 Series" };
         private String[] Volkswagen = {"Jetta   ", "Beetle", "Golf  ", "Atlas    ", "Passat", "Tiguan"  };
 
 
@@ -125,6 +125,11 @@ namespace CarClassLibrary
                 }
                 check = random.Next(1, 100);
                 if (check % 2 == 0)
+                {
+                    rElectric = true;
+                }
+
+                if (rMake.Equals("Tesla"))
                 {
                     rElectric = true;
                 }

@@ -19,9 +19,12 @@ namespace CarShopGUI
          * Added Error Notification(Let's the user know if there are any errors)
          * Implemented a simple forum design
          * Updated total cost to reflect whenever change happens
-         * Added a Randomizer, simplifies entries to the inventory
          * Added a double click listener
-         * 
+         * Added a Randomizer, simplifies entries to the inventory
+         *  Side note, I'm kind of happy with how the randomizer turned out! 
+         *  It's not full random because some variables affect the final outcome
+         *  Still happy with how it turned out!
+
          */
 
 
@@ -175,6 +178,8 @@ namespace CarShopGUI
         {
             decimal total = store.checkout();
             lb_costtotal.Text = total.ToString("C");
+            store.ShoppingList.Clear();
+            shoppingListBinding.ResetBindings(false);
         }
 
         private void Generate_KeyDown(object sender, KeyEventArgs e)

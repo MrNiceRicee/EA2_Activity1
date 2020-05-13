@@ -266,6 +266,7 @@
             this.bn_checkout.TabIndex = 6;
             this.bn_checkout.Text = "Checkout";
             this.bn_checkout.UseVisualStyleBackColor = false;
+            this.bn_checkout.Click += new System.EventHandler(this.Checkout_Click);
             // 
             // gb_generate
             // 
