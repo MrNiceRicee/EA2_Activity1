@@ -11,7 +11,18 @@ namespace CarShopConsoleApp
     {
         static Store CarStore = new Store();
 
-
+        /*
+         * Notes for the teacher
+         * Errors:
+         * Not sure how to fix it, but whenever user inputts anything, it gets written twice.
+         * 
+         * 
+         * Things Added:
+         * Cleaned up the display portion of the cars
+         * Added a generator for the console app
+         * Added checks if the inventory and shopping list is empty
+         * Changed how the chooseaction works
+         */
 
         static void Main(string[] args)
         {
@@ -94,6 +105,7 @@ namespace CarShopConsoleApp
                         printStoreInventory(CarStore);
                         if (CarStore.CarList.Count > 0)
                         {
+                            //checks if theres anything in the list
                             int choice = 0;
                             Console.WriteLine("Which car would you like to add to the cart? (number)");
                             choice = Convert.ToInt32(userNumber());
@@ -111,14 +123,22 @@ namespace CarShopConsoleApp
                         }else{
                             Console.WriteLine("No cars in stock");
                         }
+
                         break;
                     case 3:
                         //check out
-                        printShoppingCart(CarStore);
-                        Console.WriteLine("Your total cost is $(0)", CarStore.checkout());
+                        if (CarStore.ShoppingList.Count > 0)
+                        {
+                            //checks if theres anything in the list
+                            printShoppingCart(CarStore);
+                            Console.WriteLine("Your total cost is $(0)", CarStore.checkout());
+                        }
+                        else
+                        {
+                            Console.WriteLine("Cart is empty");
+                        }
 
                         break;
-
                     default:
                         break;
                 }
